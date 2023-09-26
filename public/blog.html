@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('light-blue.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .container {
+            margin-top: 1px;
+        }
+        .signup-form {
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+        .signup-btn {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .signup-btn:hover {
+            background-color: #0056b3;
+        }
+        .section{
+            background-color: #2d6199; /* Blue color for the top part */
+            padding: 10px;
+            color: #fff;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h1>Write your blog</h1>
+
+    </div>
+    
+    
+    <div class="container">
+        <div id="searchBox">
+            <input type="text" id="searchInput" placeholder="Search... by title">
+            <button id="search">search</button> 
+            <div id="searchResults">
+                <ul id="searchlist">
+                </ul>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="amount"> Title</label>
+                <input id="title" type="text"  name="title">
+                <label for="description"> Description</label>
+                <textarea id="description" name="description" rows="1" cols="40"></textarea>
+                <label for="category"> Choose a category</label>
+                <select name="category" id="category" value="choose" selected  name="category">
+                    <option value="Food">Food</option>
+                    <option value="Education">Education</option>
+                    <option value="Businessmen">Businessmen</option>
+                    <option value="Positions">Positions</option>
+                </select>
+                <input class="button" type="submit" id="Add" value="Add Article">
+
+            </div>
+            <table>
+                        
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+                <tbody id="list">
+
+
+                </tbody>
+
+
+                
+            </table>
+
+
+
+
+
+
+           
+        
+        
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
+    <script src="blog.js"></script>
+</body>
+</html>
